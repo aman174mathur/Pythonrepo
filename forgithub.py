@@ -9,3 +9,82 @@ Original file is located at
 
 print("hello world")
 
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+#newlist = [expression for item in iterable if condition == True]
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newfruits=[x for x in fruits if x=="banana"]
+print(newfruits)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newfruits=[x for x in fruits if x!="banana"]
+print(newfruits)
+
+#LIST COMPREHENSION
+
+userdic2={q:q**2 for q in [1,12,890,78,45]}
+print("user_dic2",userdic2)
+
+userdic3={q:q**3 for q in range(30) if q**3%4==0}
+print(userdic3)
+
+str ="{}"
+paren={"}": "{"}
+stack=[]
+valid= True
+for char in str:
+    if char in paren:
+      if stack and stack[-1] == paren[char]:
+        stack.pop()
+      else:
+        valid=False
+        break
+    else:
+        stack.append(char)
+
+if stack:
+  valid=False
+
+if valid:
+  print("valid")
+else:
+  print("invalid")
+
+# prompt: integer to roman using dictionary
+
+def int_to_roman(num):
+    roman_map = { 1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 90: 'XC', 100: 'C', 400: 'XD', 500: 'D', 900: 'CM', 1000: 'M'}
+    integers = list(roman_map)
+    symbols = list(roman_map.values())
+
+    i = 12
+    result = ""
+
+    while num != 0:
+        if integers[i] <= num:
+            result += symbols[i]
+            num -= integers[i]
+        else:
+            i -= 1
+
+    return result
+
+
+
+int_to_roman(558)
+
+roman_dict={"M":1000,"CM":900,"D":500,"XD":400,"C":100, "XC":90, "L":50 , "XL":40 , "X":10 , "IX":9 , "V": 5 , "IV": 4 , "I":1 }
+num=558
+
+result=''
+for key in roman_dict:
+
+  while num>=roman_dict[key]:
+    result+=key
+    num-=roman_dict[key]
+print(result)
