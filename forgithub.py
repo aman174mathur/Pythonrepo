@@ -76,7 +76,7 @@ def int_to_roman(num):
 
 
 
-int_to_roman(558)
+"""int_to_roman(558)"""
 
 roman_dict={"M":1000,"CM":900,"D":500,"XD":400,"C":100, "XC":90, "L":50 , "XL":40 , "X":10 , "IX":9 , "V": 5 , "IV": 4 , "I":1 }
 num=558
@@ -96,4 +96,11 @@ if __name__ == '__main__':
     n = int(input())
     coordinates = [[i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i + j + k != n]
     print(coordinates)
+
+if __name__ == '__main__':
+  n = int(input())
+  arr = map(int, input().split())
+  arr=list(set(arr))
+  arr.sort()
+  print(arr[-2])
 
