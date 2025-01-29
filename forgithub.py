@@ -104,3 +104,144 @@ if __name__ == '__main__':
   arr.sort()
   print(arr[-2])
 
+#take a num from 2 to 5 and print its table
+num=int(input("enter your number : "))
+for j in range(2,6,1):
+  if num==j:
+    for i in range(1,11):
+      print(num,"*",i,"=",num*i)
+
+num=int(input("enter your number : "))
+for i in range(6,2,-1):
+  if num==i:
+    for j in range(1,11):
+      print(num,"*",j,"=",num*j)
+
+#printing table in reverse
+num=int(input("enter your number : "))
+for i in range(10,0,-1):
+  print(num,"*",i,"=",num*i)
+
+num=int(input("enter your number: "))
+def isprime(num):
+  for i in range(2,num):
+    if num%i==0:
+      print("not prime")
+      break
+    else:
+      print("prime")
+      break
+
+isprime(num)
+
+for i in range(2,20):
+  for j in range(2,i):
+    if i%j==0:
+      print( i,"not prime")
+      break
+    else:
+      print(i,"prime")
+      break
+
+n=int(input("enter your number: "))
+for i in range(n):
+  for j in range(n-i):
+    print("*",end="")
+  print()
+
+n=int(input("enter your number: "))
+for i in range(n):
+  for j in range(n-i):
+    print("$",end="")
+  for k in range(i+1):
+    print("*",end="")
+  print()
+
+l1=[10,10,20,30,"abc"]
+l1.append(20)  #element
+print(l1)
+
+l1=[10,10,20,30,"abc"]
+l1.pop()
+print(l1)
+
+l1=[10,10,20,30,"abc"]
+l1.pop(1)  #position
+print(l1)
+
+l1=[10,10,20,30,"abc"]
+l1.remove(10) #element
+print(l1)
+
+l1=[10,10,20,30,"abc"]
+l1.remove("abc")
+l1.sort()   #takes only one type of database
+print(l1)
+
+l1=[10,10,20,30,"abc"]
+l1.insert(3,35)   #add element at specified position
+print(l1)
+
+list=[10,20,20,30,400,500,60,13,45 ,123]
+
+target=143
+x=[]
+
+for i in range(0,len(list)-1):
+    for j in range(-1,len(list)):
+        if list[i]+list[j]==target:
+            x.append((list[i], list[j]))
+
+print(x)
+
+n=int(input("enter your number : "))
+temp=n
+reverse=0
+while(n>0):
+ remainder=n%10
+ reverse = (reverse * 10) + remainder
+ n=n//10
+
+if (temp==reverse):
+    print("palindrome")
+else:
+    print("not palindrome")
+
+def ispalindrome(str):
+    for i in range(0,int(len(str)/2)):
+        if str[i]!=str[len(str)-i-1]:
+            return False
+    return True
+
+string="RACECAR"
+ans=ispalindrome(string)
+
+if(ans):
+    print(string,"is a palindrome")
+else:
+    print("not palindrome")
+
+n=3
+for i in range(n):
+    for j in range(n-i):
+        print(" ", end=" ")
+    for k in range(i+1):
+        print(" *", end=" ")
+    print()
+
+n=4
+for i in range(n):
+    for j in range(i):
+        print(" ", end=" ")
+    for k in range(n-i):
+        print("* ",end=" ")
+    print()
+
+n=int(input("enter your number:"))
+fact=[]
+for i in range(1,n+1):
+    if n%i==0:
+        fact.append(i)
+
+print(fact)
+
