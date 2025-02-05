@@ -246,3 +246,24 @@ for i in range(1,n+1):
 print(fact)
 
 print("hellp wprld:")
+
+n=5
+
+tri=[]
+
+for i in range(n):
+    row=[]
+    for j in range(i+1):
+        if j==0 or j==i:
+            row.append(1)
+        else:
+            row.append(tri[i-1][j-1]+ tri[i-1][j])
+    tri.append(row)
+
+for row in tri:
+    space=" "*(n-len(row))
+    print(space, end=" ")
+    for num in row:
+        print(num,end=" ")
+    print()
+
