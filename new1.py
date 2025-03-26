@@ -94,9 +94,3 @@ class order:
             summary += f"product name: {product.name}\n price: {product.price}\n"
         summary += f"your total is : {total}"
         return summary
-
-cus1 = customer("aman", "1234567890")
-prod1 = product("HAIR-GEL", 1000)
-prod2=product("shower-gel",200)
-order1 = order(cus1, [prod1, prod2])
-print(order1.order_summary())
